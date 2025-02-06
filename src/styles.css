@@ -15,8 +15,9 @@ html {
 }
 
 body {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background-color: rgb(247, 212, 146);
 }
 
 input, button, textarea, select {
@@ -26,4 +27,53 @@ input, button, textarea, select {
 h1, h2, h3, h4, h5 {
     font-size: inherit;
     font-weight: inherit;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem 4rem;
+    background-color: rgb(106, 63, 23);
+}
+
+nav {
+    display: flex;
+    gap: 2.5rem;
+}
+
+nav > button {
+    padding: 5px 10px;
+    font-size: 1.7rem;
+}
+
+#content {
+    padding: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.5rem;
+    color: rgb(63, 35, 9);
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.img-wrapper {
+    height: 35rem;
+    width: 35rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 12px solid rgb(153, 85, 22);
+}
+
+.img-wrapper > img {
+    width: 100%;
+    position: relative;
+    bottom: 22%;
+}
+
+#content > p {
+    text-align: center;
 }
