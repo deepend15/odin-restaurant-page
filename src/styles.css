@@ -77,3 +77,32 @@ h1 {
 #content > p {
     text-align: center;
 }
+
+.menu {
+    display: grid;
+    gap: 3rem;
+}
+
+.menu-section {
+    display: grid;
+    gap: 2.5rem;
+    justify-items: center;
+    padding-top: 1rem;
+}
+
+.menu-section h2 {
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+.menu-item-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    width: 35rem;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+}
