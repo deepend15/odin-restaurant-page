@@ -106,3 +106,14 @@ h1 {
     display: flex;
     justify-content: space-between;
 }
+
+.about-text-container {
+    display: grid;
+    gap: 3rem;
+    width: 70%;
+}
+
+.about-text-container > p {
+    text-align: center;
+    line-height: 1.5;
+}
