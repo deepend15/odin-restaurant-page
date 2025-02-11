@@ -18,9 +18,19 @@ export function loadAbout() {
     const aboutTextP3 = document.createElement("p");
     aboutTextP3.textContent = `Come visit us and experience the world — one slice at a time!`;
     aboutTextContainer.appendChild(aboutTextP3);
+    const aboutImgContainer = document.createElement("div");
+    aboutImgContainer.classList.add("about-img-container");
+    contentDiv.appendChild(aboutImgContainer);
     const img = document.createElement("img");
     img.setAttribute("src", worldImage);
     img.setAttribute("alt", "An animated image of planet Earth.");
     img.classList.add("about-img");
-    contentDiv.appendChild(img);
+    aboutImgContainer.appendChild(img);
+    const imgCredit = document.createElement("p");
+    imgCredit.textContent = `Designed by `;
+    aboutImgContainer.appendChild(imgCredit);
+    const freepikLink = document.createElement("a");
+    freepikLink.href = "https://www.freepik.com/icon/planet-earth_921490#fromView=search&page=1&position=0&uuid=e9232251-7115-4d9e-8a91-59ce2f4ac6d4";
+    freepikLink.textContent = `Freepik`;
+    imgCredit.appendChild(freepikLink);
 }
