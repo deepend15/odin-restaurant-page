@@ -211,15 +211,19 @@ dialog::backdrop {
 }
 
 .menu {
-    display: grid;
+    max-width: 80rem;
+    display: flex;
     gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .menu-section {
     display: grid;
-    gap: 2.5rem;
+    gap: 2.2rem;
     justify-items: center;
     padding-top: 0.8rem;
+    grid-template-rows: min-content 1fr;
 }
 
 .menu-section h2 {
