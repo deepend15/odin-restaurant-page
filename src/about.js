@@ -27,7 +27,7 @@ export function loadAbout() {
     img.classList.add("about-img");
     aboutImgContainer.appendChild(img);
     const imgCredit = document.createElement("p");
-    imgCredit.textContent = `Designed by `;
+    imgCredit.textContent = `Icon designed by `;
     aboutImgContainer.appendChild(imgCredit);
     const freepikLink = document.createElement("a");
     freepikLink.href = "https://www.freepik.com/icon/planet-earth_921490#fromView=search&page=1&position=0&uuid=e9232251-7115-4d9e-8a91-59ce2f4ac6d4";
