@@ -81,6 +81,10 @@ header > p {
     color: var(--main-tan);
 }
 
+header > p:hover {
+    cursor: pointer;
+}
+
 nav {
     display: flex;
     gap: 3rem;
