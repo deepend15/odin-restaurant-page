@@ -33,6 +33,11 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+
+    /* below corrects an issue where webpage content shifts when the page introduces a scrollbar */
+
+    overflow-x: hidden;
+    margin-right: calc(-1 * (100vw - 100%));
 }
 
 *,
