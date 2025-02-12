@@ -49,6 +49,8 @@ html {
 :root {
     --main-tan: rgb(247, 212, 146);
     --header-color: rgb(106, 63, 23);
+    --text-color: rgb(63, 35, 9);
+    --home-img-wrapper-color: rgb(153, 85, 22);
 }
 
 body {
@@ -109,7 +111,7 @@ nav > button:hover {
     flex-direction: column;
     align-items: center;
     gap: 3.5rem;
-    color: rgb(63, 35, 9);
+    color: var(--text-color);
 }
 
 h1 {
@@ -123,7 +125,7 @@ h1 {
     width: 35rem;
     border-radius: 50%;
     overflow: hidden;
-    border: 12px solid rgb(153, 85, 22);
+    border: 12px solid var(--home-img-wrapper-color);
     position: relative;
 }
 
@@ -151,6 +153,54 @@ h1 {
     .order-now-text {
         visibility: visible;
     }
+    cursor: pointer;
+}
+
+#order-now-dialog {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    font-size: 1.9rem;
+    background-color: var(--main-tan);
+    color: var(--text-color);
+    border-radius: 20px;
+    border-color: var(--text-color);
+}
+
+.dialog-wrapper {
+    display: grid;
+    place-items: center;
+    gap: 10px;
+}
+
+.dialog-wrapper > p {
+    text-align: center;
+}
+
+.dialog-wrapper > button {
+    padding: 0px 10px;
+    border-radius: 10px;
+    background-color: var(--text-color);
+    color: var(--main-tan);
+    border: 2px outset black;
+}
+
+.dialog-wrapper > button:focus-visible {
+    outline: 1px solid white;
+}
+
+.dialog-wrapper > button:hover {
+    background-color: var(--header-color);
+}
+
+.dialog-wrapper > button:active {
+    background-color: var(--home-img-wrapper-color);
+    border: 2px inset black;
+}
+
+dialog::backdrop {
+    background-color: rgb(0, 0, 0, 0.4);
 }
 
 .home-text,

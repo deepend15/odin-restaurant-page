@@ -18,7 +18,24 @@ export function loadHome() {
     orderNowText.textContent = `Order Now!`;
     imgWrapper.appendChild(orderNowText);
     const tag = document.createElement("p");
+    const orderNowDialog = document.createElement("dialog");
+    orderNowDialog.id = "order-now-dialog";
+    contentDiv.appendChild(orderNowDialog);
+    const dialogWrapper = document.createElement("div");
+    dialogWrapper.classList.add("dialog-wrapper");
+    orderNowDialog.appendChild(dialogWrapper);
+    const dialogText = document.createElement("p");
+    dialogText.textContent = `Sorry, online ordering is not yet available.`;
+    dialogWrapper.appendChild(dialogText);
+    const dialogOKButton = document.createElement("button");
+    dialogOKButton.textContent = `OK`;
+    dialogWrapper.appendChild(dialogOKButton);
     tag.classList.add("home-text");
     tag.textContent = `Serving up the best wood-fired flavors from around the globe.`;
     contentDiv.appendChild(tag);
+
+    imgWrapper.addEventListener("click", () => {
+        orderNowDialog.showModal();
+        dialogOKButton.addEventListener("click", () => orderNowDialog.close());
+    });
 }
